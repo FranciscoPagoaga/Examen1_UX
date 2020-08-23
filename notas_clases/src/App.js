@@ -5,15 +5,30 @@ import { Row } from 'reactstrap';
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <Jumbo/>
-      <Row>
-        
-      </Row>
-    </div>
-  );
+class App extends React.Component{
+  
+  constructor(){
+    super();
+    this.state={
+      selectedNoteIndex:null,
+      selectedNote: null,
+      notes: null
+    }
+  }
+
+  render(){
+    return(
+      <div className="App">
+        <Jumbo/>
+      </div>
+    )
+  }
+
+  componentDidMount = () =>{
+    //aqui tengo que montar un pijazo de pendejadas
+    const data = JSON.parse(localStorage.getItem("savedData"));
+    console.log(data);
+  }
 }
 
 export default App;
