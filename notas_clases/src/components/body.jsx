@@ -1,13 +1,18 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Info from './infoform'
-
+import Apuntes from './apuntes'
 const Example = (props) => {
+  let data = JSON.parse(localStorage.getItem("data"))
+  console.log(data)
   return (
     <Container fluid>
       <Row>
-        <Col xs="6" sm="6" md="4">.col</Col>
-        <Col xs="6" sm="6" md="6">
+        <Col xs="12" sm="6" md="4">
+          {data.map(item =>{
+            return <Apuntes titulo={item.titulo} nombre={item.clase} apunte={item.apunte}>  </Apuntes>})}
+        </Col>
+        <Col xs="12" sm="6" md="6">
              <Info/>
         </Col>
       </Row>
