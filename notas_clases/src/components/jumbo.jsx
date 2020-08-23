@@ -15,7 +15,7 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <img src={icon} style={{width: 50}}></img>
+        <img src={icon} style={{width: 50}} alt="Icono"></img>
         <NavbarBrand href="/">Notas Academicas</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         
@@ -23,5 +23,7 @@ const Example = (props) => {
     </div>
   );
 }
+
+
 
 export default Example;
