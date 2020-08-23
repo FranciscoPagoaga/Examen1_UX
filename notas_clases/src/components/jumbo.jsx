@@ -1,19 +1,27 @@
-import React from 'react';
-import { Jumbotron, Container, Button } from 'reactstrap';
+import React, { useState } from 'react';
+import {
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+} from 'reactstrap';
+import icon from '../img/Book-icon.png'
+import '../App.css'
 
+const Example = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const jumbo = (props) => {
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <div>
-      <Jumbotron fluid>
-        <Container fluid >
-          <h1 className="display-3">Notas Academicas</h1>
-          <p className="lead">La mejor manera para poder tomar notas de tus clases, desde cualquier lado</p>
-        </Container>
-      </Jumbotron>
-      <Button color="primary" size="lg">Agregar notas</Button>{' '}
+      <Navbar color="dark" dark expand="md">
+        <img src={icon} style={{width: 50}}></img>
+        <NavbarBrand href="/">Notas Academicas</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        
+      </Navbar>
     </div>
   );
-};
+}
 
-export default jumbo;
+export default Example;
