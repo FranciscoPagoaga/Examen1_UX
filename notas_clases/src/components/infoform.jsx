@@ -21,7 +21,7 @@ class infoform extends Component{
       data.push(this.state)
     }
     localStorage.setItem("data",JSON.stringify(data))
-    console.log(JSON.parse(localStorage.getItem("data")))
+    window.location.reload(false);
   }
   
   handleInputChange = (event) => {
@@ -70,26 +70,6 @@ class infoform extends Component{
     </form>
     </div>
     );
-  }
-    
-    
-  
-    
-    /*  
-  function handleChange(event){
-    this.setState({
-      [event.target.name] : event.target.value})
-
-    console.log();
-  }
-*/
-  agregar(props){
-    var hola =JSON.parse(localStorage.getItem("data"))
-
-    hola.push({
-      props
-    })
-    console.log(hola)
   }
 };
 
