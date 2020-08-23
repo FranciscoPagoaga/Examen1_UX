@@ -6,8 +6,8 @@ const Example = (props) => {
   return (
     <Container fluid>
       <Row>
-        <Col xs="3">.col</Col>
-        <Col xs="6">
+        <Col xs="6" sm="6" md="4">.col</Col>
+        <Col xs="6" sm="6" md="6">
              <Info/>
         </Col>
       </Row>

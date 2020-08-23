@@ -25,7 +25,7 @@ const Example = (props) => {
         <InputGroupAddon addonType="prepend">
           <InputGroupText>👨‍🏫</InputGroupText>
         </InputGroupAddon>
-        <Input placeholder="Cuerpo" />
+        <Input placeholder="Apunte" />
       </InputGroup>
       <br />
     </div>
