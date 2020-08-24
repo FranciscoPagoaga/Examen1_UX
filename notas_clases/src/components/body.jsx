@@ -1,31 +1,38 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import React ,{ useState } from 'react';
+import { Container, Row, Col, Input,  } from 'reactstrap';
 import Info from './infoform'
 import Apuntes from './apuntes'
-const Example = (props) => {
-  let data;
-  if(JSON.parse(localStorage.getItem("data"))=== null){
-    data = []
-  }else{
-    data = JSON.parse(localStorage.getItem("data"))
+function applyFilter (data,filter) {
+  if(filter===""){
+    return data;
   }
-  console.log(data);
+  let filterData = data.filter(item =>item.clase.toString().toLowerCase().includes(filter));
+  return filterData;
+}
+const Example = (props) => {
+  let data=JSON.parse(localStorage.getItem("data")) || [];
+  const [filter, setFilter] = useState("")
+  const handleInputChange = (event)=>setFilter(event.target.value);
+  let filteredData = applyFilter(data,filter);
   return (
-    <Container fluid>
+    <Container fluid >
+      <Row style={{paddingBottom: '2em'} }>
+        <Col xs="12" sm="12" md="6" >
+          <Info/>
+        </Col>
+      </Row>
       <Row>
-        <Col xs="12" sm="6" md="4">
-          {data.map((item, index) =>{
+        <Col xs="12" sm="12" md="12">
+          <Input type="text" name="filter" id="filter" placeholder="Filtro de Clase" onChange={handleInputChange}/>
+          {filteredData.map((item, index) =>{
             return <Apuntes titulo={item.titulo} nombre={item.clase} apunte={item.apunte} key={index}>  </Apuntes>})}
         </Col>
-        <Col xs="12" sm="6" md="6">
-             <Info/>
-        </Col>
+        
       </Row>
       
     </Container>
   );
 }
-
 
 
 export default Example;
