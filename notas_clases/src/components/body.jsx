@@ -17,12 +17,12 @@ const Example = (props) => {
   return (
     <Container fluid >
       <Row style={{paddingBottom: '2em'} }>
-        <Col xs="12" sm="12" md="6" >
+        <Col xs="12" sm="12" md={{size:6, offset: 3}} >
           <Info/>
         </Col>
       </Row>
       <Row>
-        <Col xs="12" sm="12" md="12">
+        <Col xs="12" sm="12" md={{size:6, offset: 3}}>
           <Input type="text" name="filter" id="filter" placeholder="Filtro de Clase" onChange={handleInputChange}/>
           {filteredData.map((item, index) =>{
             return <Apuntes titulo={item.titulo} nombre={item.clase} apunte={item.apunte} key={index}>  </Apuntes>})}
