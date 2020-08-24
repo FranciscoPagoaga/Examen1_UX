@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Examen1_UX/static/css/main.45b0aadb.chunk.css",
+    "main.js": "/Examen1_UX/static/js/main.4f0ed1b8.chunk.js",
+    "main.js.map": "/Examen1_UX/static/js/main.4f0ed1b8.chunk.js.map",
+    "runtime-main.js": "/Examen1_UX/static/js/runtime-main.d0fec350.js",
+    "runtime-main.js.map": "/Examen1_UX/static/js/runtime-main.d0fec350.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/Examen1_UX/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.fa21f376.chunk.js": "/Examen1_UX/static/js/2.fa21f376.chunk.js",
+    "static/js/2.fa21f376.chunk.js.map": "/Examen1_UX/static/js/2.fa21f376.chunk.js.map",
+    "index.html": "/Examen1_UX/index.html",
+    "precache-manifest.6a0ebbc6837fea94ab1ba383a3b17f8b.js": "/Examen1_UX/precache-manifest.6a0ebbc6837fea94ab1ba383a3b17f8b.js",
+    "service-worker.js": "/Examen1_UX/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/Examen1_UX/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.45b0aadb.chunk.css.map": "/Examen1_UX/static/css/main.45b0aadb.chunk.css.map",
+    "static/js/2.fa21f376.chunk.js.LICENSE.txt": "/Examen1_UX/static/js/2.fa21f376.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0fec350.js",
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.fa21f376.chunk.js",
+    "static/css/main.45b0aadb.chunk.css",
+    "static/js/main.4f0ed1b8.chunk.js"
+  ]
+}
